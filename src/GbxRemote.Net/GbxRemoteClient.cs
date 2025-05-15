@@ -91,7 +91,7 @@ public partial class GbxRemoteClient : NadeoXmlRpcClient, IGbxRemoteClient
         if (!await ConnectAsync(_options.ConnectionRetries, _options.ConnectionRetryTimeout))
             return false;
 
-        await SetApiVersionAsync(DefaultApiVersion);
+        //await SetApiVersionAsync(DefaultApiVersion);
 
         if (await AuthenticateAsync(login, password))
         {
